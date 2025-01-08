@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <ul class="first">
+      <li>list1</li>
+      <li>list2</li>
+      <li>list3</li>
+      <li>list4</li>
+    </ul>
+    <div>
+      <ul class="second">
+        <li>item1</li>
+        <li id="li2" onClick="changed()">item2</li>
+        <li>item3</li>
+      </ul>
+      <script>
+        let x = document.querySelectorAll("div .second li");
+        console.log(x);
+        console.log(x[1].innerHTML);
+        // x[1].innerHTML="hello world"
+        function changed() {
+          let x1 = document.getElementById("li2");
+          x1.style.color = "red";
+          x1.style.backgroundColor = "green";
+          x1.style.border = "5px solid red";
+          x1.style.borderRadius = "20px";
+          x1.style.fontSize = "20px";
+          x1.style.fontFamily = "calibri";
+          x1.style.padding = "10px";
+        }
+      </script>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onClick="addDiv()">click me</button>
+    <button onClick="remove()">remove</button>
+    <button id ="btn1" onClick="addDiv()">remove</button>
+    <script>
+      let div1 = document.createElement("div");
+      let image = document.createElement("img");
+      let desc = document.createElement("description");
+      let btn1=document.getElementById("btn1")
+      function addDiv() {
+        btn1.innerHTML="delete"
+        div1.style.color = "blue";
+        div1.style.backgroundColor = "orange";
+        div1.style.border = "2px solid green";
+        div1.style.height = "600px";
+        div1.style.width = "350px";
+
+        //  document.body.append(div1,"hello","heee")
+        document.body.appendChild(div1);
+        let image = document.createElement("img");
+        image.setAttribute(
+          "src",
+          "https://th.bing.com/th/id/OIP.NOH8bBZLrC_5WpwupOJNkwHaEX?rs=1&pid=ImgDetMain"
+        );
+        image.style.height = "80%";
+        image.style.width = "100%";
+        div1.append(image);
+        let title = document.createElement("heading");
+        title.innerHTML = "WATER FALLS";
+        div1.append(title);
+        desc.innerHTML =
+          "It was not until the emergence of the ecosystem concept in 1935 that the vision of “nature” as a scientific object was renewed, first as a scientific object and then as an object of conservation.";
+        div1.append(desc);
+      }
+
+      function remove() {
+        div1.removeChild(desc);
+      }
+    </script>
+  </body>
+</html>
